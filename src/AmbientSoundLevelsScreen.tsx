@@ -1,14 +1,14 @@
 import React from 'react';
 import { View, Text } from 'react-native';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParams } from './Navigation';
+import { RootStackParamsList } from './Navigation';
 import { Table, Rows } from 'react-native-table-component';
 import { ScreenView } from './shared/ScreenView';
 import { StylesContext } from './shared/StylesContext';
 //import { Card } from 'react-native-elements';
 import { Card } from "@rneui/themed";
 
-type AmbientSoundLevelsProps = NativeStackScreenProps<RootStackParams, 'AmbientSoundLevels'>;
+type AmbientSoundLevelsProps = NativeStackScreenProps<RootStackParamsList, 'AmbientSoundLevels'>;
 
 const AmbientSoundLevelsTable = {
   tableData: [
@@ -29,8 +29,10 @@ const AmbientSoundLevelsTable = {
   ],
 };
 
-const AmbientSoundLevelsScreen = ({ route, navigation }: AmbientSoundLevelsProps) => {
-  const styles = React.useContext(StylesContext);
+export function AmbientSoundLevelsScreen( {navigation}: AmbientSoundLevelsProps) {
+
+  // const AmbientSoundLevelPageProps = ({ route, navigation }: AmbientSoundLevelsProps) => {
+   const styles = React.useContext(StylesContext);
 
   return (
     <ScreenView>
@@ -54,4 +56,3 @@ const AmbientSoundLevelsScreen = ({ route, navigation }: AmbientSoundLevelsProps
   );
 }
 
-export default AmbientSoundLevelsScreen;

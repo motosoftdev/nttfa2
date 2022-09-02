@@ -1,16 +1,16 @@
 import React from 'react';
 import { SafeAreaView, View, Image } from 'react-native';
 import { Header, Button, Icon } from 'react-native-elements';
-import { NavigationContainer, DrawerActions, CommonActions } from '@react-navigation/native';
+import { NavigationContainer, CommonActions } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 //import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreen } from './HomeScreen';
+import {HomeScreen} from './HomeScreen';
 import DetectorSpacingScreen from './DetectorSpacingScreen';
 import ReductionInDetectorSpacingScreen from './ReductionInDetectorSpacingScreen';
 import VoltageDropScreen from './VoltageDropScreen';
 import PowerSuppliesScreen from './PowerSuppliesScreen';
-import BatteryChargerScreen from './BatteryChargerScreen';
-import AmbientSoundLevelsScreen from './AmbientSoundLevelsScreen';
+import {BatteryChargerScreen} from './BatteryChargerScreen';
+import {AmbientSoundLevelsScreen} from './AmbientSoundLevelsScreen';
 import TypicalWiringConfigurationsScreen from './TypicalWiringConfigurationsScreen';
 import NICETExamFindingAidsScreen from './NICETExamFindingAidsScreen';
 import ResistorColorCodesScreen from './ResistorColorCodesScreen';
@@ -25,8 +25,11 @@ import { ResistorColorCodesModalScreen } from './Modals/ResistorColorCodesModalS
 import { WiringDiagram1Modal } from './Modals/WiringDiagram1Modal';
 import { WiringDiagram2Modal } from './Modals/WiringDiagram2Modal';
 import { WiringDiagram3Modal } from './Modals/WiringDiagram3Modal';
+import { createStackNavigator } from '@react-navigation/stack';
+import { RootStackParamsList } from './Navigation';
 
-const RootStack = createNativeStackNavigator();
+const RootStack = createStackNavigator<RootStackParamsList>();
+
 
 const navigationRef = React.createRef<any>();
 
@@ -55,12 +58,13 @@ export const LayoutScreen: React.FC<LayoutScreenProps> = screenProps => {
               buttonStyle={styles.bgNttOrange}
               onPress={goHome}
             />
-          </View>}
+          </View>
+          }
         centerComponent={{ text: "NTT Fire Alarm - NICET", style: { color: '#fff', fontWeight: 'bold', fontSize: 18 } }}
         containerStyle={styles.bgNttOrange}
       />
       <RootStack.Navigator initialRouteName='Home' screenOptions={{ headerShown: false }}>
-        <RootStack.Group>
+       <RootStack.Group>
           <RootStack.Screen name="Home" component={HomeScreen} options={{ title: 'NTT Fire Alarm NICET' }} />
           <RootStack.Screen name="DetectorSpacing" component={DetectorSpacingScreen} options={{ title: 'Detector Spacing' }} />
           <RootStack.Screen name="ReductionInDetectorSpacing" component={ReductionInDetectorSpacingScreen} options={{ title: 'Reduction In Detector Spacing' }} />
@@ -73,7 +77,6 @@ export const LayoutScreen: React.FC<LayoutScreenProps> = screenProps => {
           <RootStack.Screen name="ResistorColorCodes" component={ResistorColorCodesScreen} options={{ title: 'Resistor Color Codes' }} />
         </RootStack.Group>
         <RootStack.Group screenOptions={{ presentation: 'modal' }}>
-          
           <RootStack.Screen name='HeatDetectorModal' component={HeatDetectorModalScreen} options={{ title: 'Heat Detector Modal' }} />
           <RootStack.Screen name='SmokeDetectorModal' component={SmokeDetectorModalScreen} options={{ title: 'Smoke Detector Modal' }} />
           <RootStack.Screen name='VDEquationModal' component={VDEquationModalScreen} options={{ title: 'Voltage Drop Equation' }} />
@@ -83,7 +86,7 @@ export const LayoutScreen: React.FC<LayoutScreenProps> = screenProps => {
           <RootStack.Screen name='WiringDiagram1Modal' component={WiringDiagram1Modal} />
           <RootStack.Screen name='WiringDiagram2Modal' component={WiringDiagram2Modal} />
           <RootStack.Screen name='WiringDiagram3Modal' component={WiringDiagram3Modal} />
-        </RootStack.Group>
+          </RootStack.Group>
       </RootStack.Navigator>
     </NavigationContainer>
   );

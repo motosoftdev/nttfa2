@@ -1,5 +1,5 @@
 import React from 'react';
-import { RootStackParams } from '../Navigation';
+import { RootStackParamsList } from '../Navigation';
 import { StylesContext } from '../shared/StylesContext';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScreenView } from '../shared/ScreenView';
@@ -11,7 +11,7 @@ import { Card } from "@rneui/themed";
 
 
 
-type WiringDiagram1ModalScreenProps = NativeStackScreenProps<RootStackParams, 'WiringDiagram1Modal'>;
+type WiringDiagram1ModalScreenProps = NativeStackScreenProps<RootStackParamsList, 'WiringDiagram1Modal'>;
 
 export const WiringDiagram1Modal = ({ route, navigation }: WiringDiagram1ModalScreenProps) => {
   const styles = React.useContext(StylesContext);
@@ -26,7 +26,7 @@ export const WiringDiagram1Modal = ({ route, navigation }: WiringDiagram1ModalSc
       <View style={styles.flexAlignCenter}>
       <Button 
       title="Close" 
-      onPress={() => navigation.navigate(route.params.returnPath)} 
+      onPress={() => navigation.goBack()} 
       buttonStyle = {styles.orangeBtn}
       />
       </View>

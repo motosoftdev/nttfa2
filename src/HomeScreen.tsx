@@ -2,7 +2,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import React from 'react';
 import { StyleSheet, View, Image, Touchable, TouchableOpacity } from 'react-native';
 import { Text } from 'react-native-elements'
-import { RootStackParams } from './Navigation';
+import { RootStackParamsList } from './Navigation';
 import { StylesContext } from './shared/StylesContext';
 import { ScreenView } from './shared/ScreenView';
 import { ScreenWidth } from 'react-native-elements/dist/helpers';
@@ -14,15 +14,12 @@ import { Card } from "@rneui/themed";
 
 
 
-type HomeScreenProps = NativeStackScreenProps<RootStackParams, 'Home', undefined>;
+type HomeScreenProps = NativeStackScreenProps<RootStackParamsList, 'Home'>;
 
 
-
-
-export const HomeScreen = ({ navigation }: HomeScreenProps) => {
+ export function HomeScreen({ navigation }: HomeScreenProps) {
+// React.FunctionComponent<HomeScreenProps> = ({ navigation }: HomeScreenProps) => {
   const styles = React.useContext(StylesContext);
-
-
 
   return (
     <ScreenView>

@@ -26,7 +26,7 @@ export const HeatDetectorModalScreen = ({ route, navigation }: HeatDetectorModal
         <View style={styles.flexAlignCenter}>
         <Button 
         title="Close" 
-        onPress={() => navigation.navigate(route.params.returnPath)} 
+        onPress={() => navigation.goBack()} 
         buttonStyle={styles.orangeBtn} 
         />
         </View>

@@ -26,7 +26,8 @@
     "react-native-svg": "^13.1.0",
     "react-native-table-component": "https://github.com/slice312/react-native-table-component.git",
     "react-native-ui-lib": "^6.20.2",
-    "react-native-vector-icons": "^9.2.0"
+    "react-native-vector-icons": "^9.2.0",
+    "expo-updates": "~0.14.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

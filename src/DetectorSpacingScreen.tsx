@@ -2,7 +2,7 @@ import React from 'react';
 import { View, TouchableOpacity } from 'react-native';
 import { PageCard } from './shared/PageCard';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { RootStackParams } from './Navigation';
+import { RootStackParamsList } from './Navigation';
 import SVGDetectorSpacing from './SVGs/DetectorSpacingSVG';
 import { StylesContext } from './shared/StylesContext';
 import { ScreenView } from './shared/ScreenView';
@@ -10,9 +10,9 @@ import { Text } from 'react-native-elements';
 import HDModalSVG from './SVGs/HDModalSVG';
 import { Card } from "@rneui/themed";
 
-type DetectorSpacingScreenProps = NativeStackScreenProps<RootStackParams, 'DetectorSpacing'>;
+type DetectorSpacingScreenProps = NativeStackScreenProps<RootStackParamsList, 'DetectorSpacing'>;
 
-export default function DetectorSpacingScreen({ route, navigation }: DetectorSpacingScreenProps) {
+function DetectorSpacingScreen( {navigation} : DetectorSpacingScreenProps) {
   const styles = React.useContext(StylesContext);
   return (
     <ScreenView>
@@ -51,4 +51,4 @@ export default function DetectorSpacingScreen({ route, navigation }: DetectorSpa
     </ScreenView>
   );
 }
-
+export default DetectorSpacingScreen;

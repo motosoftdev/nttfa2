@@ -9,7 +9,7 @@ import { Card } from "@rneui/themed";
 
 type BatteryChargerProps = NativeStackScreenProps<RootStackParams, 'BatteryCharger'>;
 
-const BatteryChargerScreen = ({ route, navigation }: BatteryChargerProps) => {
+export function BatteryChargerScreen({ route, navigation }: BatteryChargerProps) {
   const styles = React.useContext(StylesContext);
 
   const [AH, setAH] = React.useState('');
@@ -140,4 +140,3 @@ const BatteryChargerScreen = ({ route, navigation }: BatteryChargerProps) => {
   );
 }
 
-export default BatteryChargerScreen;

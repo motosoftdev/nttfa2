@@ -82,7 +82,7 @@ export const BCEquationModalScreen = ({ route, navigation }: BCEquationModalScre
             <Text style={{ flex: 1, paddingLeft: 5 }}>L = Continuous load on charger and battery during recharging</Text>
           </View>
           <View style={styles.flexCenter}>
-            <Button title="Close" onPress={() => navigation.navigate(route.params.returnPath)} buttonStyle={styles.orangeBtn} />
+            <Button title="Close" onPress={() => navigation.navigate('BatteryCharger')} buttonStyle={styles.orangeBtn} />
           </View>
         </View>
       </Card>

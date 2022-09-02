@@ -23,7 +23,7 @@ export const PSEquationModalScreen = ({ route, navigation }: PSEquationModalScre
         <Text style={{ paddingBottom: 10, width: '100%', textAlign: 'center' }}>1.25 ((24 * NormalCurrent) + (.08333 * AlarmCurrent))</Text>
         <Button
           title="Close"
-          onPress={() => navigation.navigate(route.params.returnPath)}
+          onPress={() => navigation.goBack()}
           buttonStyle={styles.orangeBtn}
         />
         </View>

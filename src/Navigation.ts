@@ -1,42 +1,42 @@
 
-export type RootStackParams = {
+export type RootStackParamsList = {
   Home: undefined; 
   DetectorSpacing: undefined;
   ReductionInDetectorSpacing: undefined;
   HeatDetectorModal: { 
-    returnPath: keyof RootStackParams,    
+    returnPath: keyof RootStackParamsList,    
   };
   SmokeDetectorModal: { 
-    returnPath: keyof RootStackParams,  
+    returnPath: keyof RootStackParamsList,  
   };
   VoltageDrop: undefined;
   VDEquationModal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   PowerSupplies: undefined;
   PSEquationModal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   BatteryCharger: undefined;
   BCEquationModal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   
   AmbientSoundLevels: undefined;
   TypicalWiringConfigurations: undefined;
   WiringDiagram1Modal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   WiringDiagram2Modal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   WiringDiagram3Modal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
   NICETExamFindingAids: undefined;
   ResistorColorCodes: undefined;
   ResistorColorCodesModal: { 
-    returnPath: keyof RootStackParams,   
+    returnPath: keyof RootStackParamsList,   
   };
 };
 

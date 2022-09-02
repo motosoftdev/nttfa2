@@ -55,7 +55,7 @@ export const VDEquationModalScreen = ({ route, navigation }: VDEquationModalScre
       <VDModal2SVG width={200} height={200} style={{padding: 0}} />
       </View>
       <View style={styles.flexCenter}>
-      <Button title="Close" onPress={() => navigation.navigate(route.params.returnPath)} buttonStyle={styles.orangeBtn}/>
+      <Button title="Close" onPress={() => navigation.goBack()} buttonStyle={styles.orangeBtn}/>
       </View>
       </Card>
     </ScreenView>

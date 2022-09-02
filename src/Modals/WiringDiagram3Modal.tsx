@@ -4,10 +4,10 @@ import { StylesContext } from '../shared/StylesContext';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { ScreenView } from '../shared/ScreenView';
 import { View } from 'react-native';
-import { Button } from 'react-native-elements';
+//import { Button } from 'react-native-elements';
 import { ScrollView } from 'react-native-gesture-handler';
 import TypicalWiringConfiguration3 from '../SVGs/TypicalWiringConfiguration3';
-import { Card } from "@rneui/themed";
+import { Card, Button } from "@rneui/themed";
 
 
 
@@ -26,7 +26,7 @@ export const WiringDiagram3Modal = ({ route, navigation }: WiringDiagram3ModalSc
       <View style={styles.flexAlignCenter}>
       <Button 
       title="Close" 
-      onPress={() => navigation.navigate(route.params.returnPath)} 
+      onPress={() => navigation.goBack()} 
       buttonStyle = {styles.orangeBtn}
       />
       </View>
