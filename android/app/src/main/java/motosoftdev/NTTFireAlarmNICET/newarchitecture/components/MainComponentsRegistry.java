@@ -1,4 +1,4 @@
-package com.nttfa2.newarchitecture.components;
+package motosoftdev.NTTFireAlarmNICET.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;

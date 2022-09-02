@@ -1,4 +1,4 @@
-package com.nttfa2;
+package motosoftdev.NTTFireAlarmNICET;
 import expo.modules.ReactActivityDelegateWrapper;
 
 import com.facebook.react.ReactActivity;

@@ -21,7 +21,7 @@ function DetectorSpacingScreen( {navigation} : DetectorSpacingScreenProps) {
           <Text style={styles.screenTitle}>Detector Spacing</Text>
           <SVGDetectorSpacing width={350} height={300} />
           <View style={{ display: 'flex', flexDirection: 'row', paddingTop: 15 }}>
-            <Text style={{ fontSize: 11, textAlign: 'center' }}>Use the legend below for more information on Heat and Smoke Detectors</Text>
+            <Text style={{ fontSize: 11, textAlign: 'center' }}>A Use the legend below for more information on Heat and Smoke Detectors</Text>
           </View>
           <View style={{ flexDirection: 'row', paddingTop: 15 }}>
             <TouchableOpacity onPress={() => {
